@@ -162,11 +162,31 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 .badge-label { font-size: 11px; letter-spacing: 1px; text-transform: uppercase; opacity: .9; line-height: 1.5; }
 
 @media (max-width: 600px) {
+  .sobre-images {
+    height: auto !important;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+  }
+  .img-main, .img-sec {
+    position: relative !important;
+    top: auto !important; left: auto !important;
+    right: auto !important; bottom: auto !important;
+    width: 100% !important; height: 220px !important;
+    border: none !important;
+  }
+  .sobre-images .img-card,
+  .sobre-images .sobre-badge {
+    opacity: 1 !important;
+    transform: none !important;
+  }
   .sobre-badge {
-    position: relative; bottom: auto; left: auto;
+    position: relative !important;
+    bottom: auto !important; left: auto !important;
+    grid-column: 1 / -1;
     display: inline-flex; align-items: center; gap: 12px;
-    padding: 14px 20px; margin-top: 16px;
-    text-align: left; border-radius: 50px;
+    padding: 14px 20px; border-radius: 50px;
+    text-align: left; justify-content: center;
   }
   .badge-num { font-size: 1.8rem; }
   .badge-label { font-size: 10px; }

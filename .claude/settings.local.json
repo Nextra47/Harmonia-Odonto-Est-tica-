@@ -1,0 +1,13 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:www.jkesteticaavancada.com.br)",
+      "WebFetch(domain:clinicaviotto.com.br)",
+      "Bash(git --version)",
+      "Bash(gh --version)",
+      "Bash(git -C /c/Users/digit/Harmonia init)",
+      "Bash(git -C /c/Users/digit/Harmonia add .)",
+      "Bash(git -C /c/Users/digit/Harmonia commit -m \"Site Harmonia Odonto Estética - versão inicial\")"
+    ]
+  }
+}

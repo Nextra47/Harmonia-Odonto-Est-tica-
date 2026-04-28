@@ -161,6 +161,17 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 .badge-num { display: block; font-family: var(--serif); font-size: 2.6rem; font-weight: 300; line-height: 1; }
 .badge-label { font-size: 11px; letter-spacing: 1px; text-transform: uppercase; opacity: .9; line-height: 1.5; }
 
+@media (max-width: 600px) {
+  .sobre-badge {
+    position: relative; bottom: auto; left: auto;
+    display: inline-flex; align-items: center; gap: 12px;
+    padding: 14px 20px; margin-top: 16px;
+    text-align: left; border-radius: 50px;
+  }
+  .badge-num { font-size: 1.8rem; }
+  .badge-label { font-size: 10px; }
+}
+
 .sobre-text .section-pretitle { text-align: left; }
 .sobre-text .section-title { text-align: left; }
 .sobre-text p { font-size: 15px; color: var(--muted); font-weight: 300; line-height: 1.85; margin-bottom: 18px; }
@@ -282,8 +293,8 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 
 /* ===== RESPONSIVE ===== */
 @media (max-width: 900px) {
-  .sobre-grid { grid-template-columns: 1fr; gap: 56px; }
-  .sobre-images { height: 380px; }
+  .sobre-grid { grid-template-columns: 1fr; gap: 40px; }
+  .sobre-images { height: 340px; }
   .sobre-badge { left: 0; }
   .servicos-lista { grid-template-columns: 1fr; }
   .s-item:nth-child(odd) { border-right: none; padding-right: 0; }

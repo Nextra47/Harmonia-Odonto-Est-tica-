@@ -67,7 +67,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 .header-inner { display: flex; align-items: center; gap: 40px; }
 
 .logo { display: flex; align-items: center; flex-shrink: 0; }
-.logo-img { height: 270px; width: auto; max-width: 400px; object-fit: contain; filter: brightness(0) invert(1); }
+.logo-img { height: 58px; width: auto; max-width: 200px; object-fit: contain; filter: brightness(0) invert(1); }
 #header.scrolled .logo-img { filter: none; }
 
 #nav { flex: 1; }

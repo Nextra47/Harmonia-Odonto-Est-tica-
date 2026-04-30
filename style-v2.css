@@ -94,7 +94,6 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   position: absolute; inset: 0;
   width: 100%; height: 100%;
   object-fit: cover;
-  background: url('https://images.unsplash.com/photo-1629909615184-74f495363b67?w=1600&q=85') center/cover no-repeat;
   transform: scale(1.05); transition: transform 8s ease;
 }
 .hero.loaded .hero-bg { transform: scale(1); }

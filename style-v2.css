@@ -69,6 +69,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 .logo { display: flex; align-items: center; flex-shrink: 0; }
 .logo-img { height: 110px; width: auto; max-width: 260px; object-fit: contain; filter: brightness(0) invert(1); transition: height .4s; }
 #header.scrolled .logo-img { height: 70px; filter: none; }
+.logo-footer { height: 80px; filter: brightness(0) invert(1); }
 
 #nav { flex: 1; }
 #nav ul { display: flex; align-items: center; justify-content: center; gap: 40px; }

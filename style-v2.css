@@ -97,6 +97,12 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   transform: scale(1.05); transition: transform 8s ease;
 }
 .hero.loaded .hero-bg { transform: scale(1); }
+
+/* Mobile: hide video, show photo */
+@media (max-width: 768px) {
+  .hero-bg { display: none; }
+  .hero { background: url('fotos/harmonia1.png') center/cover no-repeat; }
+}
 .hero-overlay { position: absolute; inset: 0; background: linear-gradient(135deg, rgba(20,20,20,.85) 40%, rgba(20,20,20,.35)); }
 .hero-content { position: relative; z-index: 2; max-width: 680px; }
 

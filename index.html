@@ -170,26 +170,27 @@
           <div class="ci reveal delay-3"><span>E-mail</span><p>recepcaobrusque2022@gmail.com</p></div>
         </div>
       </div>
-      <form class="contato-form reveal delay-2" id="contactForm">
+      <form class="contato-form reveal delay-2" id="contactForm" action="https://formspree.io/f/xrejglwq" method="POST">
         <h3>Agende sua Avaliação Gratuita</h3>
-        <div class="form-group"><input type="text" placeholder="Seu nome completo" required /></div>
+        <div class="form-group"><input type="text" name="nome" placeholder="Seu nome completo" required /></div>
         <div class="form-row">
-          <div class="form-group"><input type="tel" placeholder="WhatsApp" required /></div>
-          <div class="form-group"><input type="email" placeholder="E-mail" /></div>
+          <div class="form-group"><input type="tel" name="whatsapp" placeholder="WhatsApp" required /></div>
+          <div class="form-group"><input type="email" name="email" placeholder="E-mail" /></div>
         </div>
         <div class="form-group">
-          <select>
+          <select name="tratamento">
             <option value="">Qual tratamento te interessa?</option>
-            <option>Lentes de Contato Dental</option>
-            <option>Clareamento Dental</option>
-            <option>Facetas de Porcelana</option>
             <option>Implantes Dentários</option>
+            <option>Lentes em Resina</option>
+            <option>Lentes em Cerâmica</option>
+            <option>Clareamento Dental</option>
+            <option>Ortodontia</option>
+            <option>Prótese Protocolo</option>
             <option>Harmonização Facial</option>
-            <option>Toxina Botulínica</option>
             <option>Outro</option>
           </select>
         </div>
-        <div class="form-group"><textarea placeholder="Mensagem (opcional)" rows="3"></textarea></div>
+        <div class="form-group"><textarea name="mensagem" placeholder="Mensagem (opcional)" rows="3"></textarea></div>
         <button type="submit" class="btn btn-gold btn-full">Solicitar Avaliação Gratuita</button>
       </form>
     </div>

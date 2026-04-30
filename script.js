@@ -54,15 +54,28 @@ document.querySelectorAll('.faq-item').forEach(item => {
   });
 });
 
-// Contact form
-document.getElementById('contactForm')?.addEventListener('submit', e => {
+// Contact form — Formspree
+document.getElementById('contactForm')?.addEventListener('submit', async e => {
   e.preventDefault();
-  const btn = e.target.querySelector('button[type="submit"]');
+  const form = e.target;
+  const btn = form.querySelector('button[type="submit"]');
   btn.textContent = 'Enviando...'; btn.disabled = true;
-  setTimeout(() => {
-    btn.textContent = '✓ Solicitação Enviada!'; btn.style.background = '#4CAF50';
-    setTimeout(() => { btn.textContent = 'Solicitar Avaliação Gratuita'; btn.style.background = ''; btn.disabled = false; e.target.reset(); }, 3000);
-  }, 1200);
+  try {
+    const res = await fetch(form.action, {
+      method: 'POST',
+      body: new FormData(form),
+      headers: { 'Accept': 'application/json' }
+    });
+    if (res.ok) {
+      btn.textContent = '✓ Solicitação Enviada!'; btn.style.background = '#4CAF50';
+      form.reset();
+      setTimeout(() => { btn.textContent = 'Solicitar Avaliação Gratuita'; btn.style.background = ''; btn.disabled = false; }, 4000);
+    } else {
+      btn.textContent = 'Erro, tente novamente'; btn.style.background = '#e53935'; btn.disabled = false;
+    }
+  } catch {
+    btn.textContent = 'Erro, tente novamente'; btn.style.background = '#e53935'; btn.disabled = false;
+  }
 });
 
 // Scroll reveal
